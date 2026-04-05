@@ -1,0 +1,18 @@
+
+.dropdown {
+  position: relative;
+  font-size: 300px;   /* ปรับขนาดตามต้องการ เช่น 24px, 2rem, หรือ 150% */
+  font-weight: bold; /* แถม: ทำให้ตัวหนาขึ้น */
+}
+
+/* เปลี่ยนขนาดตัวหนังสือ "sahur" (ตัวลูกที่ซ่อนอยู่) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: hsl(188, 100%, 50%);
+  min-width: 130px;
+  
+  font-size: 96px;   /* ปรับขนาดตัวเมนูย่อยให้เล็กลงกว่าตัวหลักเล็กน้อย */
+  padding: 35px 34px;
+  box-shadow: 0px 8px 16px 0px rgb(123, 121, 121);
+}
