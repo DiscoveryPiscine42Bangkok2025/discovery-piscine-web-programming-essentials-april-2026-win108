@@ -1,41 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Piscine Responsive Table</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Table</title>
     <style>
-        
-        html, body {
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden; 
+            height: 100vh;
+            background-color: #f0f0f0;
         }
-
         
         table {
+            border-collapse: collapse;
             width: 100%;
-            height: 100%;
-            border-collapse: collapse; 
+            height: 100vh;
+            background-color: rgb(106, 135, 215);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-
+        
         td {
-            border: 1px solid black;
-            text-align: center;
             padding: 20px;
-            font-family: sans-serif;
+            text-align: center;
+            font-size: 24px;
             font-weight: bold;
+            width: 50%;
+            height: 100%;
+            vertical-align: middle;
+        }
+        
+        .box1 {
+            background-color: #ff6b6bee;
+            color: white;
+        }
+        
+        .box2 {
+            background-color: #4ECDC4;
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            td {
+                font-size: 18px;
+                padding: 10px;
+            }
         }
     </style>
 </head>
 <body>
-
     <table>
         <tr>
-            <td style="background-color: darkolivegreen;"> first cell </td>
-            <td style="background-color: palevioletred;"> second cell </td>
+            <td class="box1">skibidi</td>
+            <td class="box2">tung tung</td>
         </tr>
     </table>
-
 </body>
 </html>
