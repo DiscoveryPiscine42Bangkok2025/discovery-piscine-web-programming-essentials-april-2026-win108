@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <script>
+        const circle = document.createElement('div');
+
+        let size = 100;
+
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        function changecircleColor() {
+            circle.style.backgroundColor = getRandomColor();
+            size += 100;
+            if (size >= 810) {
+                size=100; }
+            circle.style.width = size + 'px';
+            circle.style.height = size + 'px';
+         
+      }
+            
+        circle.style.width = '500px';
+        circle.style.height = '500px';
+        circle.style.backgroundColor = 'lightblue';
+        circle.style.borderRadius = '50%';
+        circle.style.cursor = 'pointer';
+        circle.addEventListener('click', changecircleColor);
+        document.body.appendChild(circle);
+    
+
+    </script>
+</body>
+</html>
