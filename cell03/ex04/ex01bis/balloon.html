@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balloon</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        #balloon {
+            width: 500px;
+            height: 500px;
+            background-color: lightblue;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        $(document).ready(function() {
+            let size = 100;
+            const $balloon = $('<div id="balloon"></div>');
+            $balloon.css({
+                width: '500px',
+                height: '500px',
+                backgroundColor: 'lightblue',
+                borderRadius: '50%',
+                cursor: 'pointer'
+            });
+
+            function getRandomColor() {
+                const letters = '0123456789ABCDEF';
+                let color = '#';
+                for (let i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+
+            $balloon.click(function() {
+                $(this).css('background-color', getRandomColor());
+                size += 100;
+                if (size >= 810) {
+                    size = 100;
+                }
+                $(this).css({
+                    width: size + 'px',
+                    height: size + 'px'
+                });
+            });
+
+            $('body').append($balloon);
+        });
+    </script>
+</body>
+</html>
